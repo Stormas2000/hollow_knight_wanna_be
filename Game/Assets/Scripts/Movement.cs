@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour {
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
    
         float h = Input.GetAxis("Horizontal");
@@ -46,4 +46,5 @@ public class Movement : MonoBehaviour {
             jump = 0;
         }
     }
+
 }
