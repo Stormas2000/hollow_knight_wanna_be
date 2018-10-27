@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class SettingMenuScript : MonoBehaviour {
 
     Resolution[] res;
@@ -28,6 +29,13 @@ public class SettingMenuScript : MonoBehaviour {
         resDropdown.AddOptions(options);
         resDropdown.value = ResolutionIndex;
         resDropdown.RefreshShownValue();
+    }
+    public void back(int a)
+    {
+        if (a == 1)
+        {
+            SceneManager.LoadScene("StartingMenu");
+        }
     }
 
     public void SetResolution(int i)
