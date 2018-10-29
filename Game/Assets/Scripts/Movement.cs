@@ -59,6 +59,13 @@ public class Movement : MonoBehaviour {
         {
             grounded = true;
         }
+        
+        RaycastHit2D hit2 = Physics2D.Raycast(transform.position, Vector2.up, 0.9f, groundLayer);
+
+        if (hit2.collider != null)
+        {
+            jump -= 0.4f;
+        }
 
     }
 
