@@ -7,6 +7,7 @@ public class Mob_1 : MonoBehaviour {
     private Rigidbody2D rigi_mob1;
     public float speed, jump,health;
     public int attack_damage;
+    Player_manegement damage_player;
     // Use this for initialization
     void Start () {
         health = 100;
@@ -31,16 +32,15 @@ public class Mob_1 : MonoBehaviour {
             offensivemode = true;
         }
     }
+    public void damage_mob()
+    {
 
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag != "Player" || collision.gameObject.tag != "Weapon")
+        if(collision.gameObject.tag == "Weapon")
         {
-            jump = 25;
-        }
-        if(collision.gameObject.tag != "Weapon")
-        {
-            //chamar a variavel do player q e responsavel pelo damage
+            damage_player.damage_manager(attack_damage);
         }
     }
 }

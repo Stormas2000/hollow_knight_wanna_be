@@ -22,7 +22,7 @@ public class Player_manegement : MonoBehaviour {
             //aumentar a experiencia necessaria para dar level up
         }
     }
-    private void damage_manager()
+    public void damage_manager(int damage_taken)
     {
 
     }
@@ -32,7 +32,6 @@ public class Player_manegement : MonoBehaviour {
         if(collision.gameObject.tag =="Monster")
         {
             //chamar as variaveis
-            damage_manager();
         }
     }
 }
